@@ -20,11 +20,11 @@
 		
 
 
-#Readme (configuration)
+# Readme (configuration)
 
 	#cp [OPTION] Source Destination
 
-#Default:
+# Default:
 
 	cp /home/Scheduling/def/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
 	cp /home/Scheduling/def/config.h /usr/src/minix/include/minix/config.h ; 
@@ -36,14 +36,14 @@
 	make hdboot ; 
 	reboot
 
-#Priority:
+# Priority:
 
 	cp /home/Scheduling/prio/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
 	cd /usr/src/releasetools ; 
 	make hdboot ; 
 	reboot
 
-#Round-Robin:
+# Round-Robin:
 
 	cp /home/Scheduling/rr/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
 	cp /home/Scheduling/rr/config.h /usr/src/minix/include/minix/config.h ; 
@@ -52,14 +52,14 @@
 	make hdboot ; 
 	reboot
 
-#Shortest-Job-First:
+# Shortest-Job-First:
 
 	#cp /home/Scheduling/sjf/new/usr/src /usr/src/ ; 
 	#cd /usr/src/releasetools ; 
 	#make hdboot ; 
 	#reboot
 
-#Multilevel-Feedback:
+# Multilevel-Feedback:
 
 	cp /home/Scheduling/mlfb/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
 	cp /home/Scheduling/mlfb/config.h /usr/src/minix/include/minix/config.h ; 
@@ -69,7 +69,7 @@
 	make hdboot ; 
 	reboot
 
-#File-System-Implement:
+# File-System-Implement:
 	
 	cp /home/Requirment4/super.h /usr/src/minix/fs/mfs/super.h ; 
 	cp /home/Requirment4/super.c /usr/src/minix/fs/mfs/super.c ; 
