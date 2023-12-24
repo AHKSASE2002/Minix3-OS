@@ -1,73 +1,77 @@
 # Minix3-OS
-# CSE_335-Operating-systems-MINIX3-V3.3.0-Project
+# CSE_335-Operating-systems-MINIX3-V3.2.1-Project
 
-# Note: source code is setup on default scheduler
+## Requirement 2 Setup and Execution Guide
 
-# Changing scheduling type:
-	
-	got to home directory
-	
-	 #cd /home
-	
-	then run the following for each scheduler
-	
-	Default :                   #sh def.txt
-	Priority:                   #sh prio.txt
-	Round-Robin:                #sh rr.txt
-	Shortest-Job-First:         #sh sjf.txt
-	Multilevel-Feedback:        #sh mlfb.txt
-	File-System-Implement:      #sh req4.txt
-		
+This guide outlines the steps to fulfill Requirement 2, which involves changing scheduling algorithms of MINIX 3
+
+1. **MFQ**
+2. **Priority**
+3. **Round Robin**
+
+4. **Shortest Job First**
+
+### Prerequisites
+
+Before proceeding, ensure that the following prerequisites are met:
+
+- Minix is installed on your system.
+- You have access to the `/home` directory in Minix.
+
+### Requirement 2 Steps
+
+1. **Place Content to /home:**
+
+    Place all Requirement 2 content in the `/home` directory of your Minix system.
+
+2. **Running config file**
+
+   First compile config.c using:
+   ```bash
+    cc config.c -o config
+    ```
+   then run using:
+   ```bash
+    ./config
+    ```
+   Select algorithm you want to compile
 
 
-# Readme (configuration)
 
-	#cp [OPTION] Source Destination
+4. **Shutdown and Restart Minix:**
 
-# Default:
+    After compiling the C files, shut down and restart your Minix system
+   
+5. **Compile C Files:**
 
-	cp /home/Scheduling/def/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
-	cp /home/Scheduling/def/config.h /usr/src/minix/include/minix/config.h ; 
-	cp /home/Scheduling/def/schedproc.h /usr/src/minix/servers/sched/schedproc.h ; 
-	cp /home/Scheduling/def/proto.h /usr/src/minix/servers/sched/proto.h ; 
-	cp /home/Scheduling/def/super.h /usr/src/minix/fs/mfs/super.h ; 
-	cp /home/Scheduling/def/super.c /usr/src/minix/fs/mfs/super.c ; 
-	cd /usr/src/releasetools ; 
-	make hdboot ; 
-	reboot
+    Open a terminal in Minix and navigate to the `/home` directory using the `cd` command:
 
-# Priority:
+    ```bash
+    cd /home
+    ```
 
-	cp /home/Scheduling/prio/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
-	cd /usr/src/releasetools ; 
-	make hdboot ; 
-	reboot
+    Compile each of the following C files using the provided command:
 
-# Round-Robin:
+    ```bash
+    cc longrun0.c -o longrun0
+    cc mytest.c -o mytest
+    cc test.c -o test
+    ```
 
-	cp /home/Scheduling/rr/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
-	cp /home/Scheduling/rr/config.h /usr/src/minix/include/minix/config.h ; 
-	cp /home/Scheduling/rr/schedproc.h /usr/src/minix/servers/sched/schedproc.h ; 
-	cd /usr/src/releasetools ; 
-	make hdboot ; 
-	reboot
+    This will generate executable files `longrun0`, `mytest`, and `test`.
 
-# Shortest-Job-First:
 
-	#cp /home/Scheduling/sjf/new/usr/src /usr/src/ ; 
-	#cd /usr/src/releasetools ; 
-	#make hdboot ; 
-	#reboot
+6. **Run mytest:**
 
-# Multilevel-Feedback:
+    Once Minix has restarted, run the compiled `mytest` executable:
 
-	cp /home/Scheduling/mlfb/schedule.c /usr/src/minix/servers/sched/schedule.c ; 
-	cp /home/Scheduling/mlfb/config.h /usr/src/minix/include/minix/config.h ; 
-	cp /home/Scheduling/mlfb/schedproc.h /usr/src/minix/servers/sched/schedproc.h ; 
-	cp /home/Scheduling/mlfb/proto.h /usr/src/minix/servers/sched/proto.h ; 
-	cd /usr/src/releasetools ; 
-	make hdboot ; 
-	reboot
+    ```bash
+    ./mytest
+    ```
+
+    This will execute the `mytest` program, and you should observe the expected behavior as per Requirement 2.
+
+
 
 # File-System-Implement:
 	
