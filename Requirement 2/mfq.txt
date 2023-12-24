@@ -1,0 +1,22 @@
+cp /home/MFQ/schedule.c /usr/src/servers/sched/schedule.c;
+cp /home/MFQ/schedproc.h /usr/src/servers/sched/schedproc.h;
+cp /home/MFQ/config.h  /usr/src/include/minix/config.h;
+
+	cd /usr/src/lib/libc/;
+		 make;
+		 make install;
+	cd /usr/src/include/minix/;
+		 make ;
+		 make install;
+	cd /usr/src/servers/pm;
+		 make;
+		 make install;
+	cd /usr/src/servers/sched;
+		 make;
+		 make install;
+
+cd /usr/src;
+	 make clean;
+	 make build;
+	 make install;
+	 shutdown -p;

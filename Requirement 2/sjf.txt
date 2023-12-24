@@ -1,0 +1,20 @@
+cp /home/SJF/schedule.c /usr/src/servers/sched/schedule.c;
+
+	cd /usr/src/lib/libc/;
+		 make;
+		 make install;
+	cd /usr/src/include/minix/;
+		 make ;
+		 make install;
+	cd /usr/src/servers/pm;
+		 make;
+		 make install;
+	cd /usr/src/servers/sched;
+		 make;
+		 make install;
+
+cd /usr/src;
+	 make clean;
+	 make build;
+	 make install;
+	 shutdown -p;
